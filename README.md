@@ -20,7 +20,7 @@ Restore
  Where managerio_data_1 is your data container.
 
 
-Advanced usage:
+Advanced usage (to access to Manager app with just simple name via nginx-proxy):
 
 You can create and launch docker-compose.yml with following
 
@@ -46,8 +46,8 @@ Where 172.16.236.138 is your docker host IP address.
 
 Add to /etc/resolver/dev on your host
 ```
-192.16.236.138
+nameserver 192.16.236.138
 ```
 
 And just point your browser with address http://manager.dev
-Volia!
+Volia!	
