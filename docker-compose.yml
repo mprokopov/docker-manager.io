@@ -1,0 +1,12 @@
+data:
+  image: busybox
+  volumes:
+    - /data
+
+server:
+  image: mprokopov/manager.io
+  command: mono ManagerServer.exe -port 8080 -path '/data'
+  volumes_from:
+    - data
+  environment:
+    - VIRTUAL_HOST=manager.dev
