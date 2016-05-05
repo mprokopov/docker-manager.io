@@ -7,7 +7,7 @@ RUN mkdir /manager
 RUN mkdir /data
 VOLUME ["/data"]
 WORKDIR /manager
-ENV MANAGER_VER 16.2.51
+ENV MANAGER_VER 16.4.16
 RUN wget -N http://download.manager.io/ManagerServer.tar.gz
 RUN tar -xzf ManagerServer.tar.gz
 CMD mono ManagerServer.exe -port 8080 -path "/data"

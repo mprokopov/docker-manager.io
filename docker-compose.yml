@@ -3,13 +3,16 @@
   #volumes:
     #- /data
 
-server:
-  build: .
-  #image: mprokopov/manager.io
-  volumes:
-    - ./data:/data
-  environment:
-    - VIRTUAL_HOST=manager.dev
+version: "2"
+
+services:
+  server:
+    build: .
+    image: mprokopov/manager.io
+    volumes:
+      - ./data:/data
+    environment:
+      - VIRTUAL_HOST=manager.dev
   #command: mono ManagerServer.exe -port 8080 -path '/data'
   #volumes_from:
     #- data
