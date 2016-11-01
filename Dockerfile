@@ -9,7 +9,7 @@ RUN mkdir /manager
 RUN mkdir /data
 VOLUME ["/data"]
 WORKDIR /manager
-ENV MANAGER_VER 16.10.50
+ENV MANAGER_VER 16.10.92
 RUN wget -N https://mngr.s3.amazonaws.com/ManagerServer.tar.gz
 RUN tar -xzf ManagerServer.tar.gz
 CMD mono ManagerServer.exe -port 8080 -path "/data"
