@@ -7,12 +7,16 @@ version: "2"
 
 services:
   server:
-    build: .
-    image: mprokopov/manager.io
+    build:
+      context: .
+      dockerfile: Dockerfile.mono
+    image: mprokopov/manager.io:latest
     volumes:
       - ./data:/data
     environment:
       - VIRTUAL_HOST=manager.dev
+    ports:
+      - 8080:8080
   #command: mono ManagerServer.exe -port 8080 -path '/data'
   #volumes_from:
     #- data
