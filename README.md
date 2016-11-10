@@ -1,5 +1,6 @@
 # docker-manager.io
 Dockerized http://manager.io accounting software
+
 Run with
 ```
 docker run -v $(pwd)/data:/data -p 8080:8080 mprokopov/manager.io
