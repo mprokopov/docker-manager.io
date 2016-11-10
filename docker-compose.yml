@@ -9,7 +9,7 @@ services:
   server:
     build:
       context: .
-      dockerfile: Dockerfile.mono
+      dockerfile: Dockerfile
     image: mprokopov/manager.io:latest
     volumes:
       - ./data:/data
