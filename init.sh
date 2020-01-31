@@ -1,11 +1,9 @@
 #!/bin/bash
 
-LATEST_VERSION=`curl https://www.manager.io/version.txt`
+wget https://github.com/Manager-io/Manager.zip/releases/latest/download/Manager.zip -O Manager.zip
 
-curl -O https://d2ap5zrlkavzl7.cloudfront.net/$LATEST_VERSION/ManagerServer.tar.gz
+unzip Manager.zip
 
-tar -xzf ManagerServer.tar.gz
-
-rm -f ManagerServer.tar.gz
+rm -f Manager.zip
 
 mono ManagerServer.exe -port 8080 -path "/data"

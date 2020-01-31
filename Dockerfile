@@ -1,4 +1,6 @@
-FROM mono:5.8
+FROM mono:6.8
+
+RUN apt-get update && apt-get install wget unzip
 
 COPY init.sh /
 
